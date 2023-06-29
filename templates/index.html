@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Say Hello</title>>
+        <link rel="stylesheet" href=" {{url_for('static', filename='css/main.css')}} ">
+    </head>
+    <body>
+        <img src="https://th.bing.com/th/id/R.ba0dbc7b465a8696717ec8a965758845?rik=46Aoh7RbTj5xrw&riu=http%3a%2f%2f1.bp.blogspot.com%2f_MNYn7bR_3AE%2fTOHFdm5SXJI%2fAAAAAAAAAJY%2fXGT786fbrNs%2fs1600%2fPunk%2bRockers.jpg&ehk=4Tx4vu65AXSyyD74xQleAx2jnecCXfn3rSsCp1xapZs%3d&risl=&pid=ImgRaw&r=0">
+        <br>
+        <form action="greet" method="post">
+            {% for message in get_flashed_messages() %}
+                <p> {{message}} </p>
+            {% endfor %}
+            <br>
+            <input type="text" name="name_input">
+            <br>
+            <input type="submit" value="GREET" ID="greet">
+        </form>
+    </body>
+<html>
